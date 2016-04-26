@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C274CD01CC9B13D00A25A52 /* FontMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C274CCF1CC9B13D00A25A52 /* FontMetrics.swift */; };
+		2C274CD21CC9B7B700A25A52 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C274CD11CC9B7B700A25A52 /* TextAttributes.swift */; };
+		2C2AD3241CCC67F600FD0F7B /* MetricLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2AD3231CCC67F600FD0F7B /* MetricLabel.swift */; };
+		2C2AD3261CCC698A00FD0F7B /* TextInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2AD3251CCC698A00FD0F7B /* TextInfo.swift */; };
 		2CFBC83B1CC9B0AA0078B01C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBC83A1CC9B0AA0078B01C /* AppDelegate.swift */; };
 		2CFBC83D1CC9B0AA0078B01C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBC83C1CC9B0AA0078B01C /* ViewController.swift */; };
 		2CFBC8401CC9B0AA0078B01C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CFBC83E1CC9B0AA0078B01C /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C274CCF1CC9B13D00A25A52 /* FontMetrics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontMetrics.swift; sourceTree = "<group>"; };
+		2C274CD11CC9B7B700A25A52 /* TextAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttributes.swift; sourceTree = "<group>"; };
+		2C2AD3231CCC67F600FD0F7B /* MetricLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricLabel.swift; sourceTree = "<group>"; };
+		2C2AD3251CCC698A00FD0F7B /* TextInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInfo.swift; sourceTree = "<group>"; };
 		2CFBC8371CC9B0AA0078B01C /* FontPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFBC83A1CC9B0AA0078B01C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CFBC83C1CC9B0AA0078B01C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,8 +105,12 @@
 		2CFBC8391CC9B0AA0078B01C /* FontPreview */ = {
 			isa = PBXGroup;
 			children = (
-				2CFBC83A1CC9B0AA0078B01C /* AppDelegate.swift */,
+				2C274CD11CC9B7B700A25A52 /* TextAttributes.swift */,
+				2C274CCF1CC9B13D00A25A52 /* FontMetrics.swift */,
+				2C2AD3251CCC698A00FD0F7B /* TextInfo.swift */,
+				2C2AD3231CCC67F600FD0F7B /* MetricLabel.swift */,
 				2CFBC83C1CC9B0AA0078B01C /* ViewController.swift */,
+				2CFBC83A1CC9B0AA0078B01C /* AppDelegate.swift */,
 				2CFBC83E1CC9B0AA0078B01C /* Main.storyboard */,
 				2CFBC8411CC9B0AA0078B01C /* Assets.xcassets */,
 				2CFBC8431CC9B0AA0078B01C /* LaunchScreen.storyboard */,
@@ -256,7 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2AD3241CCC67F600FD0F7B /* MetricLabel.swift in Sources */,
+				2C274CD01CC9B13D00A25A52 /* FontMetrics.swift in Sources */,
+				2C274CD21CC9B7B700A25A52 /* TextAttributes.swift in Sources */,
 				2CFBC83D1CC9B0AA0078B01C /* ViewController.swift in Sources */,
+				2C2AD3261CCC698A00FD0F7B /* TextInfo.swift in Sources */,
 				2CFBC83B1CC9B0AA0078B01C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +498,7 @@
 				2CFBC8611CC9B0AB0078B01C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CFBC8621CC9B0AB0078B01C /* Build configuration list for PBXNativeTarget "FontPreviewTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +507,7 @@
 				2CFBC8641CC9B0AB0078B01C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2CFBC8651CC9B0AB0078B01C /* Build configuration list for PBXNativeTarget "FontPreviewUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +516,7 @@
 				2CFBC8671CC9B0AB0078B01C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

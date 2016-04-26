@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FontPreview" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlD-KX-DFd" customClass="MetricLabel" customModule="FontPreview" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="198"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-PV-KR0">
+                                <rect key="frame" x="0.0" y="198" width="600" height="198"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.29741379310344829" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VlD-KX-DFd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HE9-Vh-4jX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ejb-PV-KR0" secondAttribute="trailing" constant="-20" id="If2-4I-wNq"/>
+                            <constraint firstAttribute="trailing" secondItem="VlD-KX-DFd" secondAttribute="trailing" id="Kso-2e-p8e"/>
+                            <constraint firstItem="ejb-PV-KR0" firstAttribute="top" secondItem="VlD-KX-DFd" secondAttribute="bottom" id="W5K-C1-DDs"/>
+                            <constraint firstItem="VlD-KX-DFd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="atf-7z-f0H"/>
+                            <constraint firstItem="VlD-KX-DFd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.33" id="dcj-Wk-ybs"/>
+                            <constraint firstItem="ejb-PV-KR0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="fZ9-55-Nsr"/>
+                            <constraint firstItem="ejb-PV-KR0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.33" id="olV-O5-QoP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="VlD-KX-DFd" id="BuI-uZ-Wmd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="455" y="398"/>
         </scene>
     </scenes>
 </document>

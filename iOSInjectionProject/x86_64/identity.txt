@@ -1,0 +1,2 @@
+/Users/Emiaostein/Library/Developer/Xcode/DerivedData/FontPreview-hkemzgpdfxgjyjdcvahlkplgmjjt/Build/Products/Debug-iphonesimulator/FontPreview.app
+
