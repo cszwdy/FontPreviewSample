@@ -16,7 +16,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        registerLocalFonts()
+        
         return true
+    }
+    
+    func registerLocalFonts() {
+        
+        let fontsName = "Fonts"
+        let path = NSBundle.mainBundle().bundleURL
+        let fontsDirUrl = path.URLByAppendingPathComponent(fontsName)
+        let jsonName = "fonts.json"
+        let jsonFileURL = fontsDirUrl.URLByAppendingPathComponent(jsonName)
+        let data = NSData(contentsOfURL: jsonFileURL)!
+        let fileNames = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions(rawValue: 0)) as! [String]
+        
+        for name in fileNames {
+            let fontFileUrl = fontsDirUrl.URLByAppendingPathComponent(name)
+            
+            guard
+                let data = NSData(contentsOfURL: fontFileUrl),
+                let provider = CGDataProviderCreateWithCFData(data),
+                let cgfont = CGFontCreateWithDataProvider(provider) where CTFontManagerRegisterGraphicsFont(cgfont, nil) else { continue }
+            
+            let ctFont = CTFontCreateWithGraphicsFont(cgfont, 1, nil, nil)
+            
+            guard
+                let familyName = CTFontCopyName(ctFont, kCTFontFamilyNameKey)?.toString(),
+                let fullName = CTFontCopyName(ctFont,kCTFontFullNameKey)?.toString(),
+                let postscriptName = CTFontCopyName(ctFont, kCTFontPostScriptNameKey)?.toString() else { continue }
+            
+            print(postscriptName)
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -42,5 +74,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+private extension CFString {
+    
+    func toString() -> String {
+        return self as String
+    }
 }
 
