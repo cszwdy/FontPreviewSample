@@ -11,6 +11,7 @@
 		2C274CD21CC9B7B700A25A52 /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C274CD11CC9B7B700A25A52 /* TextAttributes.swift */; };
 		2C2AD3241CCC67F600FD0F7B /* MetricLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2AD3231CCC67F600FD0F7B /* MetricLabel.swift */; };
 		2C2AD3261CCC698A00FD0F7B /* TextInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2AD3251CCC698A00FD0F7B /* TextInfo.swift */; };
+		2C2CA0E51CD0569C003D8633 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2CA0E41CD0569C003D8633 /* ConstraintView.swift */; };
 		2CBD65C01CCF689C00ED70F9 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 2CBD65BF1CCF689C00ED70F9 /* Fonts */; };
 		2CFBC83B1CC9B0AA0078B01C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBC83A1CC9B0AA0078B01C /* AppDelegate.swift */; };
 		2CFBC83D1CC9B0AA0078B01C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFBC83C1CC9B0AA0078B01C /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		2C274CD11CC9B7B700A25A52 /* TextAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttributes.swift; sourceTree = "<group>"; };
 		2C2AD3231CCC67F600FD0F7B /* MetricLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricLabel.swift; sourceTree = "<group>"; };
 		2C2AD3251CCC698A00FD0F7B /* TextInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInfo.swift; sourceTree = "<group>"; };
+		2C2CA0E41CD0569C003D8633 /* ConstraintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintView.swift; sourceTree = "<group>"; };
 		2CBD65BF1CCF689C00ED70F9 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		2CFBC8371CC9B0AA0078B01C /* FontPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CFBC83A1CC9B0AA0078B01C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				2C274CCF1CC9B13D00A25A52 /* FontMetrics.swift */,
 				2C2AD3251CCC698A00FD0F7B /* TextInfo.swift */,
 				2C2AD3231CCC67F600FD0F7B /* MetricLabel.swift */,
+				2C2CA0E41CD0569C003D8633 /* ConstraintView.swift */,
 				2CFBC83C1CC9B0AA0078B01C /* ViewController.swift */,
 				2CFBC83A1CC9B0AA0078B01C /* AppDelegate.swift */,
 				2CFBC83E1CC9B0AA0078B01C /* Main.storyboard */,
@@ -275,6 +278,7 @@
 				2C2AD3241CCC67F600FD0F7B /* MetricLabel.swift in Sources */,
 				2C274CD01CC9B13D00A25A52 /* FontMetrics.swift in Sources */,
 				2C274CD21CC9B7B700A25A52 /* TextAttributes.swift in Sources */,
+				2C2CA0E51CD0569C003D8633 /* ConstraintView.swift in Sources */,
 				2CFBC83D1CC9B0AA0078B01C /* ViewController.swift in Sources */,
 				2C2AD3261CCC698A00FD0F7B /* TextInfo.swift in Sources */,
 				2CFBC83B1CC9B0AA0078B01C /* AppDelegate.swift in Sources */,

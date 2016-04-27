@@ -29,7 +29,7 @@ class MetricLabel: UILabel {
     }
     var count: CGFloat = 2
     private var infos: [NSAttributedString.TextUnit] {
-        return attributedText?.generateTextUnitsIn(CGRect(x: 0, y: 0, width: bounds.width / count, height: bounds.height)) ?? []
+        return attributedText?.generateTextUnitsWith(CGRect(x: 0, y: 0, width: bounds.width / count, height: bounds.height)) ?? []
     }
     
     override func drawTextInRect(rect: CGRect) {
@@ -50,6 +50,7 @@ class MetricLabel: UILabel {
                 t.removeFromSuperlayer()
             }
         })
+        
         for info in infos {
             
             let constraintPath = UIBezierPath(rect: info.constraintRect)
@@ -91,14 +92,40 @@ class MetricLabel: UILabel {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 extension NSAttributedString {
     
     struct TextUnit {
         let text: String
         let attributes: [String: AnyObject]?
 
-        let origin: CGPoint  // the real text view position
-        let size: CGSize  // the real text view size
+        let origin: CGPoint  // the real text view position. coordinate to
+        let size: CGSize  // the real text view size. coordinate to
         let typographicRect: CGRect  // the text view draw rect
         let section: Int
         let inSectionglyphIndex: Int
@@ -135,7 +162,7 @@ extension NSAttributedString {
         }
     }
     
-    func generateTextUnitsIn(constraintRect: CGRect) -> [TextUnit] {
+    func generateTextUnitsWith(constraintRect: CGRect) -> [TextUnit] {
         
         let storage = NSTextStorage(attributedString: self)
         let container = NSTextContainer(size: constraintRect.size)
