@@ -103,6 +103,8 @@ extension NSAttributedString {
                 var stringIdicates = Array(count: runGlyphCount, repeatedValue: 0)
                 CTRunGetStringIndices(run, CFRangeMake(0, 0), &stringIdicates)
                 
+                print("stringRange = \(stringRange)\nstringIdicates = \(stringIdicates)")
+                
                 var restCharacters = stringRange.length
                 for g in 0..<runGlyphCount {
                     // Glyph
